@@ -1,6 +1,11 @@
 name: Build and deploy Aseprite
 
 on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version to build, leave empty for latest"
+        required: false
   schedule:
     - cron: '0 0 * * *'
   push:
